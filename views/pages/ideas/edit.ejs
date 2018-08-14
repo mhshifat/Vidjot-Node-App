@@ -1,0 +1,14 @@
+<div class="card card-body">
+  <h3>Edit Video Ideas</h3>
+  <form action="/ideas/edit/<%= idea.id %>" method="POST">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Title</label>
+      <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= idea.title %>" autocomplete="off" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Details</label>
+      <textarea name="details" class="form-control" id="exampleFormControlTextarea1" rows="3"><%= idea.details %></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>

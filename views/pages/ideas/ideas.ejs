@@ -1,0 +1,14 @@
+<% if (ideas.length > 0) { %>
+  <% ideas.forEach(idea => { %>
+    <div class="card card-body mb-3">
+      <h4><%= idea.title %></h4>
+      <p><%= idea.details %></p>
+      <a href="/ideas/edit/<%= idea.title %>" class="btn-dark btn-block text-center">Edit</a>
+      <a href="/ideas/delete/<%= idea.id %>" class="btn-danger btn-block text-center">Delete</a>
+    </div>
+  <% }) %>
+<% } else { %>
+  <div class="card card-body text-center">
+    <p style="margin-bottom: 0;">No Ideas Found</p>
+  </div>
+<% } %>
